@@ -17,7 +17,7 @@ gp-bke-runtime-minimal-application:
     enabled: true
   env:
      - name: APACHE_HTTP_PORT_NUMBER
-       value: 8081
+       value: "8081"
   resources:
     limits:
       cpu: 250m
