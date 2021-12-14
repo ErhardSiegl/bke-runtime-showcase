@@ -15,7 +15,7 @@ spec:
   - name: full-access
     description: full-access privileges to showcase-project
     policies:
-    - p, proj:showcase-project:*, applications, *, showcase-project/*, allow
+    - p, proj:showcase-project:full-access, applications, *, showcase-project/*, allow
     groups:
     - Gepaplexx
   sourceRepos:
