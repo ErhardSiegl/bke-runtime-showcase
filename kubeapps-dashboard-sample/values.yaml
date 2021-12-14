@@ -13,6 +13,9 @@ gp-bke-runtime-minimal-application:
     targetPort: 80
   route:
     enabled: true
+    tls:
+      enabled: true
+      termination: edge
   resources:
     limits:
       cpu: 250m

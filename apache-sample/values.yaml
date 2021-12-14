@@ -15,6 +15,9 @@ gp-bke-runtime-minimal-application:
     targetPort: 80
   route:
     enabled: true
+    tls:
+      enabled: true
+      termination: edge
   env:
      - name: APACHE_HTTP_PORT_NUMBER
        value: "80"
