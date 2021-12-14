@@ -1,0 +1,49 @@
+# Default values for gp-bke-runtime-minimal-nginx-sample.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+
+image:
+  name: bitnami/nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion
+  tag: latest
+
+ports:
+   - name: http
+     containerPort: 8080
+     protocol: TCP
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
+
+route:
+  # Deploy a route for this deployment?
+  enabled: true
+  wildcardPolicy: None
+  tls:
+    enabled: false
+    termination: edge
+
+livenessProbe:
+  enabled: false
+  path: "" # default is /
+
+readinessProbe:
+  enabled: false
+  path: "" # default is /
+
+# Define environment variables for the pod
+env: {}
+   - name: EXAMPLE_ENV
+     value: "blubb"
+
+resources:
+  limits:
+    cpu: 250m
+    memory: 400Mi
+  requests:
+    cpu: 250m
+    memory: 400Mi

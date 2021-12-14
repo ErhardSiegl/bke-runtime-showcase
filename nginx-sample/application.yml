@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-sample-application
+  namespace: felix-playground
+spec:
+  destination:
+    namespace: felix-playground
+    server: https://kubernetes.default.svc
+#  project: default
+  source:
+    path: gp-bke-runtime-minimal-application/
+    repoURL: https://docs.gepaplexx.com/gp-helm-charts/
+    targetRevision: 0.0.5
+  sync:
+    comparedTo:
+      destination:
+        namespace: felix-playground
+        server: https://kubernetes.default.svc
+      source:
+    source:
+      path: gp-bke-runtime-minimal-application/
+      repoURL: https://docs.gepaplexx.com/gp-helm-charts/
+      targetRevision: 0.0.5
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
