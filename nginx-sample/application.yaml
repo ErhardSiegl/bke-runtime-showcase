@@ -7,21 +7,19 @@ spec:
   destination:
     namespace: felix-playground
     server: https://kubernetes.default.svc
-#  project: default
   source:
-    path: gp-bke-runtime-minimal-application/
-    repoURL: https://docs.gepaplexx.com/gp-helm-charts/
-    targetRevision: 0.0.5
+    path: nginx-sample
+    repoURL: https://github.com/fhochleitner/bke-runtime-showcase
+    targetRevision: main
   sync:
     comparedTo:
       destination:
         namespace: felix-playground
         server: https://kubernetes.default.svc
-      source:
     source:
-      path: gp-bke-runtime-minimal-application/
-      repoURL: https://docs.gepaplexx.com/gp-helm-charts/
-      targetRevision: 0.0.5
+      path: nginx-sample
+      repoURL: https://github.com/fhochleitner/bke-runtime-showcase
+      targetRevision: main
   syncPolicy:
     automated:
       prune: true
