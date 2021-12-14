@@ -1,22 +1,21 @@
-nginx:
-  replicaCount: 1
-  image:
-    name: bitnami/nginx
-    tag: latest
-  ports:
-     - name: http
-       containerPort: 8080
-       protocol: TCP
-  service:
-    type: ClusterIP
-    port: 8080
-    targetPort: 8080
-  route:
-    enabled: true
-  env:
-     - name: EXAMPLE_ENV
-       value: "blubb"
-  resources:
-    limits:
-      cpu: 250m
-      memory: 400Mi
+replicaCount: 1
+image:
+  name: bitnami/nginx
+  tag: latest
+ports:
+   - name: http
+     containerPort: 8080
+     protocol: TCP
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
+route:
+  enabled: true
+env:
+   - name: EXAMPLE_ENV
+     value: "blubb"
+resources:
+  limits:
+    cpu: 250m
+    memory: 400Mi
