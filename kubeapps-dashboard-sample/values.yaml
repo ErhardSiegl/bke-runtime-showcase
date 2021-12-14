@@ -5,12 +5,12 @@ gp-bke-runtime-minimal-application:
     tag: latest
   ports:
      - name: http
-       containerPort: 80
+       containerPort: 8080
        protocol: TCP
   service:
     type: ClusterIP
-    port: 80
-    targetPort: 80
+    port: 8080
+    targetPort: 8080
   route:
     enabled: true
     tls:

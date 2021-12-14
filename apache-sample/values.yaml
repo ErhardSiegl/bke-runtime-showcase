@@ -5,14 +5,14 @@ gp-bke-runtime-minimal-application:
     tag: latest
   ports:
      - name: http
-       containerPort: 80
+       containerPort: 8081
        protocol: TCP
   route:
     enabled: true
   service:
     type: ClusterIP
     port: 8080
-    targetPort: 80
+    targetPort: 8081
   route:
     enabled: true
     tls:
@@ -20,7 +20,7 @@ gp-bke-runtime-minimal-application:
       termination: edge
   env:
      - name: APACHE_HTTP_PORT_NUMBER
-       value: "80"
+       value: "8081"
   resources:
     limits:
       cpu: 250m
