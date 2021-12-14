@@ -11,15 +11,7 @@ spec:
     path: nginx-sample
     repoURL: https://github.com/fhochleitner/bke-runtime-showcase
     targetRevision: main
-  sync:
-    comparedTo:
-      destination:
-        namespace: felix-playground
-        server: https://kubernetes.default.svc
-    source:
-      path: nginx-sample
-      repoURL: https://github.com/fhochleitner/bke-runtime-showcase
-      targetRevision: main
+  project: showcase-project
   syncPolicy:
     automated:
       prune: true
