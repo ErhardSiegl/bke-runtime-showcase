@@ -1,7 +1,7 @@
 gp-bke-runtime-minimal-application:
   replicaCount: 2
   image:
-    name: bitnami/nginx
+    name: bitnami/apache
     tag: latest
   ports:
      - name: http
