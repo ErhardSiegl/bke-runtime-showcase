@@ -9,13 +9,13 @@ spec:
   - name: read-only
     description: Read-only privileges to showcase-project
     policies:
-    - p, proj:my-project:read-only, applications, get, my-project/*, allow
+    - p, proj:showcase-project:read-only, applications, get, showcase-project/*, allow
     groups:
     - Gepardec
   - name: full-access
     description: full-access privileges to showcase-project
     policies:
-    - p, proj:my-project:*, applications, *, showcase-project/*, allow
+    - p, proj:showcase-project:*, applications, *, showcase-project/*, allow
     groups:
     - Gepaplexx
   sourceRepos:
