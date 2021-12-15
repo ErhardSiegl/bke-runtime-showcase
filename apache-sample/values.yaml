@@ -1,5 +1,5 @@
 gp-bke-runtime-minimal-application:
-  replicaCount: 2
+  replicaCount: 3
   image:
     name: bitnami/apache
     tag: latest
