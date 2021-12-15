@@ -1,5 +1,5 @@
 gp-bke-runtime-minimal-application:
-  replicaCount: 2
+  replicaCount: 1
   image:
     name: fhochleitner/runtime-go-application
     tag: latest
