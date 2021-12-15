@@ -1,0 +1,14 @@
+gp-bke-runtime-minimal-application:
+  replicaCount: 2
+  image:
+    name: fhochleitner/runtime-go-application
+    tag: latest
+  ports:
+     - name: http
+       containerPort: 8080
+       protocol: TCP
+  route:
+    enabled: true
+    tls:
+      enabled: true
+      termination: edge
