@@ -60,7 +60,7 @@ webapp-color:
     tag: latest
   env:
   - name: APP_COLOR
-    value: GREEN
+    value: darkblue
   resources:
     limits:
       cpu: 250m
