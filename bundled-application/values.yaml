@@ -59,7 +59,7 @@ webapp-color:
     name: kodekloud/webapp-color
     tag: latest
   env:
-  - name: COLOR
+  - name: APP_COLOR
     value: GREEN
   resources:
     limits:

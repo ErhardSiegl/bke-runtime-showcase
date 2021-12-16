@@ -6,21 +6,21 @@ appVersion: "1.0.0"
 dependencies:
 - alias: apache2
   name: gp-bke-runtime-minimal-application
-  version: 0.0.6
+  version: 0.0.7
   repository: https://docs.gepaplexx.com/gp-helm-charts
 - alias: nginx
   name: gp-bke-runtime-minimal-application
-  version: 0.0.6
+  version: 0.0.7
   repository: https://docs.gepaplexx.com/gp-helm-charts
 - alias: kubeapps
   name: gp-bke-runtime-minimal-application
-  version: 0.0.6
+  version: 0.0.7
   repository: https://docs.gepaplexx.com/gp-helm-charts
 - alias: golang-example
   name: gp-bke-runtime-minimal-application
-  version: 0.0.6
+  version: 0.0.7
   repository: https://docs.gepaplexx.com/gp-helm-charts
 - alias: webapp-color
   name: gp-bke-runtime-minimal-application
-  version: 0.0.6
+  version: 0.0.7
   repository: https://docs.gepaplexx.com/gp-helm-charts
