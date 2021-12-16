@@ -8,7 +8,7 @@ spec:
     namespace: felix-playground
     server: https://kubernetes.default.svc
   source:
-    path: bundles-application
+    path: bundled-application
     repoURL: https://github.com/fhochleitner/bke-runtime-showcase
     targetRevision: main
   project: showcase-project
