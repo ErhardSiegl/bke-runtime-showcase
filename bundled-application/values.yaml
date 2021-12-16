@@ -1,4 +1,4 @@
-apache2:
+gp-bke-runtime-minimal-application:
   replicaCount: 3
   image:
     name: bitnami/apache
@@ -15,6 +15,9 @@ apache2:
     targetPort: 8081
   route:
     enabled: true
+    tls:
+      enabled: true
+      termination: edge
   env:
      - name: APACHE_HTTP_PORT_NUMBER
        value: "8081"
@@ -22,48 +25,3 @@ apache2:
     limits:
       cpu: 250m
       memory: 400Mi
-nginx:
-  replicaCount: 1
-  image:
-    name: bitnami/nginx
-    tag: latest
-  route:
-    enabled: true
-  env:
-     - name: EXAMPLE_ENV
-       value: "blubb"
-  resources:
-    limits:
-      cpu: 250m
-      memory: 400Mi
-kubeapps:
-  replicaCount: 1
-  image:
-    name: bitnami/kubeapps-dashboard
-    tag: latest
-  route:
-    enabled: true
-  resources:
-    limits:
-      cpu: 250m
-      memory: 400Mi
-golang-example:
-  replicaCount: 1
-  image:
-    name: fhochleitner/runtime-go-application
-    tag: latest
-  route:
-    enabled: true
-webapp-color:
-  image:
-    name: kodekloud/webapp-color
-    tag: latest
-  env:
-  - name: COLOR
-    value: GREEN
-  resources:
-    limits:
-      cpu: 250m
-      memory: 400Mi
-  route:
-    enabled: true
