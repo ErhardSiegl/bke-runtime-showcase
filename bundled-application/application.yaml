@@ -11,7 +11,7 @@ spec:
     path: bundled-application
     repoURL: https://github.com/fhochleitner/bke-runtime-showcase
     targetRevision: main
-  project: showcase-project
+  project: default
   syncPolicy:
     automated:
       prune: true
