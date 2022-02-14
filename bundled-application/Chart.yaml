@@ -1,26 +1,18 @@
 apiVersion: v2
-name: complex-application-showcase
+name: erhard-complex-application-showcase
 type: application
 version: 1.0.0
 appVersion: "1.0.0"
 dependencies:
 - alias: apache2
   name: gp-bke-runtime-minimal-application
-  version: 0.0.11
-  repository: https://docs.gepaplexx.com/gp-helm-charts
-- alias: nginx
-  name: gp-bke-runtime-minimal-application
-  version: 0.0.11
+  version: 0.0.13
   repository: https://docs.gepaplexx.com/gp-helm-charts
 - alias: kubeapps
   name: gp-bke-runtime-minimal-application
-  version: 0.0.11
-  repository: https://docs.gepaplexx.com/gp-helm-charts
-- alias: golang-example
-  name: gp-bke-runtime-minimal-application
-  version: 0.0.11
+  version: 0.0.13
   repository: https://docs.gepaplexx.com/gp-helm-charts
 - alias: webapp-color
   name: gp-bke-runtime-minimal-application
-  version: 0.0.11
+  version: 0.0.13
   repository: https://docs.gepaplexx.com/gp-helm-charts

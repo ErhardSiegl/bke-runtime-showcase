@@ -1,5 +1,5 @@
 apache2:
-  replicaCount: 3
+  replicaCount: 2
   image:
     name: bitnami/apache
     tag: latest
@@ -22,20 +22,6 @@ apache2:
     limits:
       cpu: 250m
       memory: 400Mi
-nginx:
-  replicaCount: 1
-  image:
-    name: bitnami/nginx
-    tag: latest
-  route:
-    enabled: true
-  env:
-     - name: EXAMPLE_ENV
-       value: "blubb"
-  resources:
-    limits:
-      cpu: 250m
-      memory: 400Mi
 kubeapps:
   replicaCount: 1
   image:
@@ -47,13 +33,6 @@ kubeapps:
     limits:
       cpu: 250m
       memory: 400Mi
-golang-example:
-  replicaCount: 1
-  image:
-    name: fhochleitner/runtime-go-application
-    tag: latest
-  route:
-    enabled: true
 webapp-color:
   image:
     name: kodekloud/webapp-color

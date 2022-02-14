@@ -1,15 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: complex-application-example
-  namespace: felix-playground
+  name: erhard-bundled-application
 spec:
   destination:
-    namespace: felix-playground
+    namespace: erhard-pg
     server: https://kubernetes.default.svc
   source:
     path: bundled-application
-    repoURL: https://github.com/fhochleitner/bke-runtime-showcase
+    repoURL: https://github.com/ErhardSiegl/bke-runtime-showcase
     targetRevision: main
   project: default
   syncPolicy:
