@@ -1,4 +1,5 @@
 apache2:
+  nameOverride: b-apache
   replicaCount: 2
   image:
     name: bitnami/apache
@@ -23,6 +24,7 @@ apache2:
       cpu: 250m
       memory: 400Mi
 kubeapps:
+  nameOverride: b-kubeapps
   replicaCount: 1
   image:
     name: bitnami/kubeapps-dashboard
@@ -34,6 +36,7 @@ kubeapps:
       cpu: 250m
       memory: 400Mi
 webapp-color:
+  nameOverride: b-webapp-color
   image:
     name: kodekloud/webapp-color
     tag: latest
