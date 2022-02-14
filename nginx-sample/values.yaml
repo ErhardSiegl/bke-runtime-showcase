@@ -1,6 +1,6 @@
 gp-bke-runtime-minimal-application:
   nameOverride: nginx-sample
-  replicaCount: 1
+  replicaCount: 2
   image:
     name: bitnami/nginx
     tag: latest
