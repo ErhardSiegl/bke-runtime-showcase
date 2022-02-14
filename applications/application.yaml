@@ -1,17 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-sample-application
-  namespace: felix-playground
+  name: erhard-nginx-sample
 spec:
   destination:
-    namespace: felix-playground
+    namespace: erhard-pg
     server: https://kubernetes.default.svc
   source:
     path: nginx-sample
-    repoURL: https://github.com/fhochleitner/bke-runtime-showcase
+    repoURL: https://github.com/ErhardSiegl/bke-runtime-showcase
     targetRevision: main
-  project: showcase-project
+  project: default
   syncPolicy:
     automated:
       prune: true
