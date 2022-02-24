@@ -1,0 +1,14 @@
+apiVersion: v2
+name: database-application
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+dependencies:
+- alias: application
+  name: gp-bke-runtime-minimal-application
+  version: 0.0.13
+  repository: "file:///Users/esiegl/Documents/Develop/gepaplexx/gp-helm-chart-development/bke-runtime/gp-bke-runtime-minimal-application"
+- alias: database
+  name: gp-bke-runtime-database-postgresql
+  version: 0.1.0
+  repository: "file:///Users/esiegl/Documents/Develop/gepaplexx/gp-helm-chart-development/bke-runtime/gp-bke-runtime-database-postgresql"

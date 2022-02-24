@@ -1,0 +1,11 @@
+application:
+  image:
+    name: ghcr.io/erhardsiegl/postgres-test-app-jvm
+    tag: latest
+  route:
+    enabled: true
+  database:
+    - postgrestestapp
+database:
+  db:
+    fullnameOverride: postgrestestapp-db
